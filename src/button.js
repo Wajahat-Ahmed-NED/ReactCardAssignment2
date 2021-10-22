@@ -20,7 +20,7 @@ function Price(props) {
     return (
         <>
             <p style={{ color: 'grey', fontSize: '1.2em' }}>
-            Price : {props.h}
+            Price : {props.h} Rs
             </p>
         </>
     )
@@ -28,6 +28,8 @@ function Price(props) {
 
 
 
+function Img(props){
+    return <img style={{width:"200px",height:"200px"}} src={props.h}></img>
+}
 
-
-export { Button, Heading, Detail,Price }
+export { Button, Heading, Detail,Price,Img }

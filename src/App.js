@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Button, Heading, Detail, Price } from './button';
+import { Button, Heading, Detail, Price,Img } from './button';
 import logo from './logo.svg'
 
 function App() {
@@ -15,18 +15,21 @@ function App() {
     },
     {
       name: "Shoes",
+      img:"https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg",
       detail: "kdjflkasdfnlkasdk",
-      price: 20
+      price: 2000
     },
     {
       name: "Shirt",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzODAJicjCgsSR-NhVYwnKEPWumG7hbRWkTA&usqp=CAU",
       detail: "kdjflkasdfnlkasdk",
-      price: 20
+      price: 1200
     },
     {
       name: "Jeans Pant",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNZGXUqMjAy_xfmqZ073e1T-bgX093Wccdng&usqp=CAU",
       detail: "kdjflkasdfnlkasdk",
-      price: 20
+      price: 1500
     }
   ]
 
@@ -40,8 +43,9 @@ function App() {
 
       <div className="clname">
         <Heading h={products[0].name} />
-          
+
         <hr />
+        <Img h={products[0].img}/><hr />
         <Detail h={products[0].detail} />
         <hr />
         <Price h={products[0].price} />
@@ -50,6 +54,7 @@ function App() {
       <div className="clname">
         <Heading h={products[1].name} />
         <hr />
+        <Img h={products[1].img}/><hr />
         <Detail h={products[1].detail} />
         <hr />
         <Price h={products[1].price} />
@@ -58,6 +63,7 @@ function App() {
       <div className="clname">
         <Heading h={products[2].name} />
         <hr />
+        <Img h={products[2].img}/><hr />
         <Detail h={products[2].detail} />
         <hr />
         <Price h={products[2].price} />
@@ -66,6 +72,7 @@ function App() {
       <div className="clname">
         <Heading h={products[3].name} />
         <hr />
+        <Img h={products[3].img}/><hr />
         <Detail h={products[3].detail} />
         <hr />
         <Price h={products[3].price} />
