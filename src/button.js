@@ -25,6 +25,16 @@ function Price(props) {
         </>
     )
 }
+// function Inp(props){
+//     return (
+//         <>
+//         <select {...props}>
+//             <option value="">{props.h}</option>
+//         </select>
+//         <input {...props}/>
+//         </>
+//     )
+// }
 
 
 
