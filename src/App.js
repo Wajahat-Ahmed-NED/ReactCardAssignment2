@@ -5,6 +5,11 @@ import logo from './logo.svg'
 
 function App() {
 
+  const [typ1, setTyp1] = useState('')
+  const [typ2, setTyp2] = useState('')
+  const [typ3, setTyp3] = useState('')
+  const [typ4, setTyp4] = useState('')
+  const [cate, setCate] = useState('')
 
   const [man, setMan] = useState([
     {
@@ -103,39 +108,84 @@ function App() {
   const category = (e) => {
     let a = e.target.value
     console.log(a)
+
     if (a == "man") {
       let val = man.map((x) => {
         return x.type;
       })
+      setCate('man')
       // const choose=(e)=>{
-        
+
       //   val.forEach((i)=>{
       //     console.log(i)
-          
+
       //   })}
 
-      
       console.log(val)
+      setTyp1(val[0])
+      setTyp2(val[1])
+      setTyp3(val[2])
+      setTyp4(val[3])
     }
-    else if(a=="woman"){
+    else if (a == "woman") {
       let val = woman.map((x) => {
         return x.type;
       })
       console.log(val)
+      setTyp1(val[0])
+      setTyp2(val[1])
+      setTyp3(val[2])
+      setTyp4(val[3])
+      setCate('woman')
     }
-    else if(a=="kids"){
+    else if (a == "kids") {
       let val = kids.map((x) => {
         return x.type;
       })
-      
+
       console.log(val)
+      setTyp1(val[0])
+      setTyp2(val[1])
+      setTyp3(val[2])
+      setTyp4(val[3])
+      setCate('kids')
       // let a=val.forEach(element => {
       //   return element
       // });
-      
+
+    }
+    else {
+      setTyp1('')
+      setTyp2('')
+      setTyp3('')
+      setTyp4('')
     }
   }
+  const search = (e) => {
+    let a = e.target.value
+    let b = cate
+    if (b == "man") {
+      let val = man.filter((x) => {
+        return x.type == a;
+      })
+      console.log(val)
 
+    }
+    else if (b == "woman") {
+      let val = woman.filter((x) => {
+        return x.type == a;
+      })
+      console.log(val)
+
+    }
+    else if (b == "kids") {
+      let val = kids.filter((x) => {
+        return x.type == a;
+      })
+      console.log(val)
+
+    }
+  }
 
   // const mapProduct=man.map(()=>)
   return (<>
@@ -152,18 +202,19 @@ function App() {
         <option value="kids">Kids Products</option>
       </select>
 
-      <select id="type">
+      <select id="type" onChange={(e) => search(e)}>
         <option value="" selected>Choose Type</option>
-        <option value="Jeans">Jeans</option>
-        <option value="Shoes">Shoes</option>
-        <option value="Shirt">Shirt</option>
-        <option value="Pant">Pant</option>
+        <option value="Shirt">{typ1}</option>
+        <option value="Shoes">{typ2}</option>
+        <option value="Pant">{typ3}</option>
+        <option value="Jeans">{typ4}</option>
+        {/* <option value="Pant">{typ4}</option> */}
       </select>
 
-      <Button id="search" h="Search" />
+      {/* <Button id="search" h="Search" /> */}
     </div>
 
-    <div class="pname">
+    <div className="pname">
 
       <div className="clname">
         <Heading h={man[0].name} />
@@ -203,7 +254,7 @@ function App() {
 
       </div>
     </div>
-    <div class="pname">
+    <div className="pname">
 
       <div className="clname">
         <Heading h={woman[0].name} />
@@ -243,7 +294,7 @@ function App() {
 
       </div>
     </div>
-    <div class="pname">
+    <div className="pname">
 
       <div className="clname">
         <Heading h={kids[0].name} />
