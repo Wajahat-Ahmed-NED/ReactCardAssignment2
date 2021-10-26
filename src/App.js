@@ -10,6 +10,7 @@ function App() {
   const [typ3, setTyp3] = useState('')
   const [typ4, setTyp4] = useState('')
   const [cate, setCate] = useState('')
+  const [data,setData]=useState([])
 
   const [man, setMan] = useState([
     {
@@ -169,6 +170,8 @@ function App() {
         return x.type == a;
       })
       console.log(val)
+      setData(...val)
+      console.log(data)
 
     }
     else if (b == "woman") {
@@ -176,6 +179,7 @@ function App() {
         return x.type == a;
       })
       console.log(val)
+      setData(val)
 
     }
     else if (b == "kids") {
@@ -183,7 +187,7 @@ function App() {
         return x.type == a;
       })
       console.log(val)
-
+      setData(val)
     }
   }
 
@@ -213,7 +217,9 @@ function App() {
 
       {/* <Button id="search" h="Search" /> */}
     </div>
-
+    {/* <div className="pname">
+      <Card info={data}/>
+    </div> */}
     <div className="pname">
 
       <div className="clname">

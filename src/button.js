@@ -25,6 +25,29 @@ function Price(props) {
         </>
     )
 }
+// function Card(props){
+//     console.log(props.info)
+    // return (
+
+    //     <div className="clname">
+    //         <h1>{props.info[0].name}</h1>
+    //     {/* <Heading h={man[0].name} /> */}
+
+    //     <hr />
+    //     <img src={props.info[0].img} alt="" />
+    //     <hr />
+    //     <p>{props.info[0].type}</p>
+    //     {/* <Img h={props.info[0].detail} /><hr /> */}
+    //     {/* <Detail h={man[0].detail} /> */}
+    //     <p>{props.info[0].detail}</p>
+    //     <hr />
+    //     {/* <Price h={man[0].price} /> */}
+    //     <p>{props.info[0].price}</p>
+
+    //   </div>
+      
+    // )
+// }
 // function Inp(props){
 //     return (
 //         <>
